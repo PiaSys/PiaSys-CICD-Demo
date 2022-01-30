@@ -3,7 +3,7 @@ name: Deploy Root Web Site (.NET Core) on Azure
 on:
   workflow_dispatch:
   push:
-    branches: [ dev ]
+    branches: [ main ]
     paths:
     - 'src/RootWebAppNetCore/**'
 
@@ -11,6 +11,7 @@ env:
   AZURE_WEBAPP_NAME: piasys-cicd-demo
   AZURE_WEBAPP_PACKAGE_PATH: './src/RootWebAppNetCore'
   DOTNET_VERSION: '3.1.x'
+  TARGET_SLOT: 'production'
 
 jobs:
   build:
@@ -18,7 +19,7 @@ jobs:
 
     steps:
       # Checkout the repo
-      - uses: actions/checkout@dev
+      - uses: actions/checkout@main
       
       # Setup .NET Core SDK
       - name: Setup .NET Core
@@ -39,4 +40,5 @@ jobs:
         with: 
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          slot-name: ${{ env.TARGET_SLOT }}
           package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/RootWebAppNetCore'
