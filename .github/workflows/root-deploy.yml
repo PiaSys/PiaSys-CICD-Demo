@@ -3,7 +3,7 @@ name: Deploy Root Web Site (.NET Core) on Azure
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ dev ]
     paths:
     - 'src/RootWebAppNetCore/**'
 
@@ -19,7 +19,7 @@ jobs:
 
     steps:
       # Checkout the repo
-      - uses: actions/checkout@main
+      - uses: actions/checkout@dev
       
       # Setup .NET Core SDK
       - name: Setup .NET Core
@@ -29,6 +29,7 @@ jobs:
       
       # Run dotnet build and publish
       - name: dotnet build and publish
+        working-directory: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
         run: |
           dotnet restore
           dotnet build --configuration Release
