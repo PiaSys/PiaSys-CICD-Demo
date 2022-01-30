@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\paolo\\source\\repos\\RootWebAppNetCore\\RootWebAppNetCore\\RootWebAppNetCore.csproj",
+      "projectUniqueName": "C:\\github\\PiaSys-CICD-Demo\\src\\RootWebAppNetCore\\RootWebAppNetCore\\RootWebAppNetCore.csproj",
       "projectName": "RootWebAppNetCore",
-      "projectPath": "C:\\Users\\paolo\\source\\repos\\RootWebAppNetCore\\RootWebAppNetCore\\RootWebAppNetCore.csproj",
+      "projectPath": "C:\\github\\PiaSys-CICD-Demo\\src\\RootWebAppNetCore\\RootWebAppNetCore\\RootWebAppNetCore.csproj",
       "packagesPath": "C:\\Users\\paolo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\paolo\\source\\repos\\RootWebAppNetCore\\RootWebAppNetCore\\obj\\",
+      "outputPath": "C:\\github\\PiaSys-CICD-Demo\\src\\RootWebAppNetCore\\RootWebAppNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
